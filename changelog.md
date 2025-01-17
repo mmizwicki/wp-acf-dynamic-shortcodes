@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Menu item titles
   - Menu item descriptions
   - Menu item title attributes (hover text)
+- Support for shortcodes in Breadcrumb NavXT navigation
 
 ## [1.0] - 2025-01-06
 

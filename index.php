@@ -262,6 +262,14 @@ function mpf_add_shortcode_support() {
             add_filter('gform_pre_submission_filter', 'mpf_gform_shortcode_support');
             add_filter('gform_admin_pre_render', 'mpf_gform_shortcode_support');
         }
+
+        // Support for Breadcrumb NavXT
+        add_filter('bcn_breadcrumb_title', function($title, $type, $id) {
+            if (has_shortcode($title, 'mpf')) {
+                return mpf_sanitize_shortcode_output(do_shortcode($title));
+            }
+            return $title;
+        }, 10, 3);
     }
 }
 add_action('init', 'mpf_add_shortcode_support', 999);
